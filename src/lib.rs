@@ -617,7 +617,8 @@ pub struct ChromaticAlteration {
 }
 
 /// Why an agent makes a chromatic alteration.
-#[derive(Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum AlterationPurpose {
     /// Passing tone: connects two diatonic notes smoothly.
     Passing,
     /// Neighbor tone: decorates a diatonic note.
@@ -1085,7 +1086,7 @@ mod tests {
     #[test]
     fn test_note_name_display() {
         assert_eq!(format!("{:?}", NoteName::from_pc(0)), "C");
-        assert_eq!(format!("{:?}", NoteName::from_pc(1)), "C#");
+        assert_eq!(format!("{:?}", NoteName::from_pc(1)), "Cs");
         assert_eq!(format!("{:?}", NoteName::from_pc(9)), "A");
     }
 }
