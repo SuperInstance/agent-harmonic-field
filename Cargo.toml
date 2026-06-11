@@ -3,6 +3,7 @@ description = "agent-harmonic-field"
 repository = "https://github.com/SuperInstance/agent-harmonic-field"
 name = "agent-harmonic-field"
 version = "0.1.0"
+license = "MIT OR Apache-2.0"
 edition = "2024"
 
 [dependencies]
